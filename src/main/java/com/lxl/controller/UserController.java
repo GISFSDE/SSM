@@ -22,4 +22,26 @@ public class UserController {
         model.addAttribute("user", user);
         return "index";
     }
+
+    @RequestMapping("/addUser")
+    public String addUser(User user){
+        user.setUsername("大武当");
+        this.userService.addUser(user);
+        return "index";
+    }
+
+    @RequestMapping("/deleteUserById")
+    public String deleteUserById(Integer id){
+        id=2;
+        userService.deleteUserById(id);
+        return "index";
+    }
+
+    @RequestMapping("/setUser")
+    public String setUser(User user){
+        user.setUsername("小武当");
+        user.setId(2);
+        this.userService.setUser(user);
+        return "index";
+    }
 }

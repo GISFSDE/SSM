@@ -15,4 +15,10 @@ public class UserServiceImpl implements UserService {
     public User findUserById(int id) {
         return userDao.findUserById(id);
     }
+
+    public int addUser(User user) {return userDao.addUser(user);}
+
+    public int deleteUserById(Integer id) {return userDao.deleteUserById(id);}
+
+    public int setUser(User user) {return userDao.setUser(user);}
 }

@@ -3,6 +3,12 @@ package com.lxl.dao;
 import com.lxl.entity.User;
 
 public interface  UserDao {
-    // 根据 id 寻找对应的 User
+
     User findUserById(int id);
+
+    int addUser(User user);
+
+    int deleteUserById(int id);
+
+    int setUser(User user);
 }
